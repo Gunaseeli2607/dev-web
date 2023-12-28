@@ -1,0 +1,108 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+p{
+    font-size: medium;
+}
+nav{
+    margin-left:60%;
+    color:rgb(184, 181, 181);
+}
+nav,h3,li,.logo{
+    display: inline;
+}
+.logo{
+    padding-left:8%;
+}
+.head{
+    display: inline;
+    height: 30px;
+}
+.image{
+    position: relative;
+    width: 100%;
+    color:aliceblue;
+    opacity: 0.6;
+
+}
+.content
+{
+    position: absolute;
+    top:100px;
+    margin-left:25%;
+}
+.more{
+    border:1px solid #12b886;
+    background-color: #6be0bdf1;
+    color:white;
+    padding: 5px;
+}
+.about{
+    border-right:1px solid rgb(238, 230, 215);
+    width: 280px;
+    text-align: center;
+    padding:10px;
+    height:250px ;
+
+}
+.box{
+    display: flex;
+    padding-left: 80px;
+
+}
+.box,.division
+{
+    background-color:#12b886;
+}
+.read{
+    border:1px solid #12b886;
+    background-color: #12b886;
+    color:aliceblue;
+    padding: 5px;
+}
+.sect2{
+    border: 1px solid white;
+    width: 50%;
+    height: 300px;
+    padding: 5px;
+    margin-left:5%;
+}
+.sect1{
+    border: 1px solid white;
+    width: 40%;
+    height: 300px;
+    margin:3px;
+    padding: 3px;
+}
+.our{
+    background-color:rgb(230, 225, 225) ;
+    border: 1px solid rgb(230,225,225);
+    border-radius: 5px;
+    height: 30px;
+    width:100%;
+    padding: 5px;
+    margin:5px
+}
+.special,.sect2{
+    display: flex;
+}
+.symbol{
+    position: absolute;
+    top:40px;
+    display: flex;
+    text-align: center;
+}
+.keys{
+    position: relative;
+    width: 100%;
+
+}
+.emoji{
+    text-align: center;
+    color: aliceblue;
+    display: flex;
+    margin-left: 30%;
+}
