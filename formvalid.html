@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <link rel ="Stylesheet" href="formvaild.css">
+</head>
+<body>
+    <div class="container">
+   <form  onsubmit="return validateForm();" >
+  <h3>Resgister Form</h3>
+  <div class="form-group">
+    <label for="username">Name</label>
+    <input type="text" name="username" id="username" placeholder="Enter your name">
+    <span id="nameError" class="error"></span>
+  </div>
+  <div class="form-group">
+    <label for="email">Email Id</label>
+    <input type="email" name="email" id="email" placeholder="Enter your email id">
+    <span id="emailError" class="error"></span>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Enter your password">
+    <span id="passwordError" class="error"></span>
+  </div>
+  <div class="form-group">
+    <label for="cpassword">Confirm Password</label>
+    <input type="password" name="cpassword" id="cpassword" placeholder="Enter your password">
+    <span id="cpasswordError" class="error"></span>
+    </div>
+    <div class="form-group">
+      <label for="selects">State</label>
+      <select name="selects" id ="selects" >
+        <option>--Select--</option>
+        <option>Andhra Pradesh</option>
+        <option>Chhattisgarh</option>
+        <option>Goa</option>
+         <option>Gujarat</option>
+         <option>Haryana</option>
+         <option>Himachal Pradesh</option>
+          <option>Jammu and Kashmir</option>
+          <option>Jharkhand</option>
+          <option>Karnataka</option>
+          <option>Kerala</option>
+             <option>Meghalaya</option>
+              <option>Mizoram</option>
+               <option>Nagaland</option>
+              <option>Orissa</option>
+                <option>Punjab</option>
+               <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Tripura</option>
+                <option>West Bengal</option>
+                <option>Tamil Nadu</option>
+                <option>Tripura</option>
+                <option>Andaman and Nicobar Islands</option>
+                <option>Chandigarh</option>
+                <option>Delhi</option>
+                <option>Lakshadweep</option>
+                <option>Pondicherry</option>
+               <option>Tamil Nadu</option>
+                 <option>other</option>
+      </select>
+      <span id="selectsError" class="error"></span>
+      </div>
+    <input class="button" type ="submit" value ="Submit" >
+   </form> 
+   </div>
+   <script>
+    function validateForm(){
+      document.getElementById('nameError').textContent='';
+      document.getElementById('emailError').textContent='';
+      document.getElementById('passwordError').textContent='';
+      document.getElementById('cpasswordError').textContent='';
+     document.getElementById('selectsError').textContent='';
+
+       var name=document.getElementById('username').value;
+       var email=document.getElementById('email').value;
+       var password=document.getElementById('password').value;
+       var cpassword=document.getElementById('cpassword').value;
+       var selects=document.getElementById('selects').value;
+       
+       if(name===''){
+        document.getElementById('nameError').textContent='Name is required';
+        return false;
+       }
+
+       var emailRegex=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+       if(!emailRegex.test(email)) {
+        document.getElementById('emailError').textContent='Invalid email address';
+        return false;
+       }
+       if(password ===''){
+        document.getElementById('passwordError').textContent='Password is required';
+        return false;
+       }
+       else if(password.length < 8){
+        document.getElementById('passwordError').textContent='Password must at least 8 character';
+        return false;
+       }
+       if(password ===''){
+        document.getElementById('passwordError').textContent='Password is required';
+        return false;
+       }
+       else  if(cpassword!==password)
+       {
+        document.getElementById('cpasswordError').textContent='Incorrect password';
+        return false;
+       }
+       if (selects === '--Select--')
+        {
+        document.getElementById('selectsError').textContent = 'Select any one';
+        return false;
+        }
+       return true;
+
+    }
+   </script>
+   </body>
+</html>
